@@ -1,0 +1,84 @@
+menu "hud_health" 1536 1024 NONE 1
+bgcolor 0 0 0 0
+fgcolor 1 1 1 1
+align left bottom
+
+resource
+Label
+{
+name "Default"
+rect 0 0 1536 1024
+fgcolor 1.00 1.00 1.00 1.00
+bgcolor 0.50 0.50 0.50 0.00
+borderstyle "NONE"
+shader textures/hud/healthback
+}
+
+// Frames health_0 .. health_100 in 5% steps. cgame sets cg_health_frame.
+// Manual test: set cg_health_frame textures/hud/health_50
+resource
+Label
+{
+name "healthmeter"
+rect 28 860 158 158
+fgcolor 1.00 1.00 1.00 0.60
+bgcolor 0.00 0.00 0.00 0.00
+borderstyle "NONE"
+linkcvar "cg_health_frame"
+linkcvartoshader
+shader textures/hud/health_100
+}
+
+resource
+Label
+{
+name "healthdigit2"
+rect 107 922 13 26
+fgcolor 1.00 1.00 1.00 1.00
+bgcolor 0.00 0.00 0.00 0.00
+borderstyle "NONE"
+linkcvar "cg_health_d2"
+linkcvartoshader
+shader textures/hud/digit_1
+}
+
+resource
+Label
+{
+name "healthdigit1"
+rect 120 922 13 26
+fgcolor 1.00 1.00 1.00 1.00
+bgcolor 0.00 0.00 0.00 0.00
+borderstyle "NONE"
+linkcvar "cg_health_d1"
+linkcvartoshader
+shader textures/hud/digit_0
+}
+
+resource
+Label
+{
+name "healthdigit0"
+rect 133 922 13 26
+fgcolor 1.00 1.00 1.00 1.00
+bgcolor 0.00 0.00 0.00 0.00
+borderstyle "NONE"
+linkcvar "cg_health_d0"
+linkcvartoshader
+shader textures/hud/digit_0
+}
+
+resource
+Label
+{
+name "healthnumber"
+title "HEALTH"
+rect 97 950 54 16
+fgcolor 1.00 1.00 1.00 1.00
+bgcolor 0.00 0.00 0.00 0.00
+borderstyle "NONE"
+textalign center
+font facfont-20
+}
+
+end.

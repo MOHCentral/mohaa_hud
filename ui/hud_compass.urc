@@ -1,0 +1,108 @@
+menu "hud_compass" 128 128 NONE 1
+bgcolor 0 0 0 0
+fgcolor 1 1 1 1
+align left top
+
+// Inner grid — rotates with view yaw (stock compassface)
+resource
+Label
+{
+name "compassface"
+rect 0 0 128 128
+fgcolor 1.00 1.00 1.00 1.00
+bgcolor 0.00 0.00 0.00 0.00
+borderstyle "NONE"
+statbar compass
+playerstat 16
+statbar_shader textures/radar/backgr
+}
+
+// Damage flash (stock)
+resource
+Label
+{
+name "compasspain"
+rect 0 0 128 128
+fgcolor 1.00 1.00 1.00 1.00
+bgcolor 0.00 0.00 0.00 0.00
+borderstyle "NONE"
+statbar headingspinner 0 3600
+statbar_endangles -180 180
+playerstat 29
+statbar_shader textures/hud/compasspainblank
+statbar_shader_flash textures/hud/compasspain
+}
+
+// Objective arrow (stock)
+resource
+Label
+{
+name "objarrow"
+rect 0 0 128 128
+fgcolor 1.00 1.00 1.00 1.00
+bgcolor 0.00 0.00 0.00 0.00
+borderstyle "NONE"
+playerstat 19
+statbar spinner 0 3600
+statbar_endangles -180 180
+statbar_shader textures/hud/compassobjarrow
+}
+
+// Two objective balls
+resource
+Label
+{
+name "firstobjball"
+rect 15.5 14 100 100
+fgcolor 1.00 1.00 1.00 1.00
+bgcolor 0.00 0.00 0.00 0.00
+borderstyle "NONE"
+playerstat 17
+statbar rotator 0 3600
+statbar_rotatorsize 2.5 2.5
+statbar_endangles -180 180
+statbar_shader textures/radar/balls
+}
+
+resource
+Label
+{
+name "secondobjball"
+rect 15.5 14 100 100
+fgcolor 1.00 1.00 1.00 1.00
+bgcolor 0.00 0.00 0.00 0.00
+borderstyle "NONE"
+playerstat 18
+statbar rotator 0 3600
+statbar_rotatorsize 2.5 2.5
+statbar_endangles -180 180
+statbar_shader textures/radar/balls
+}
+
+// Player needle — static, always points up
+resource
+Label
+{
+name "compassneedle"
+rect 0 0 128 128
+fgcolor 1.00 1.00 1.00 1.00
+bgcolor 0.00 0.00 0.00 0.00
+borderstyle "NONE"
+shader textures/radar/needle
+}
+
+// Outer ring with N/S/E/W — rotates with heading (stock compassface)
+resource
+Label
+{
+name "compassring"
+rect 0 0 128 128
+fgcolor 1.00 1.00 1.00 1.00
+bgcolor 0.00 0.00 0.00 0.00
+borderstyle "NONE"
+statbar compass
+playerstat 16
+statbar_shader textures/radar/ring
+}
+
+end.

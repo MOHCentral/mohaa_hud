@@ -1,0 +1,144 @@
+menu "hud_ammo_Bazooka" 356 116 NONE 1
+bgcolor 0 0 0 0
+fgcolor 1 1 1 1
+align right bottom
+
+resource
+Label
+{
+name "ammopanel"
+rect 0 0 340 100
+fgcolor 1.00 1.00 1.00 1.00
+bgcolor 0.00 0.00 0.00 0.00
+borderstyle "NONE"
+shader textures/hud/ammo_panel
+}
+
+resource
+Label
+{
+name "clip_c2"
+rect 34 6 32 64
+fgcolor 1.00 1.00 1.00 1.00
+bgcolor 0.00 0.00 0.00 0.00
+borderstyle "NONE"
+linkcvar "cg_ammo_c2"
+linkcvartoshader
+shader textures/hud/ammo_digit_empty
+}
+
+resource
+Label
+{
+name "clip_c1"
+rect 66 6 32 64
+fgcolor 1.00 1.00 1.00 1.00
+bgcolor 0.00 0.00 0.00 0.00
+borderstyle "NONE"
+linkcvar "cg_ammo_c1"
+linkcvartoshader
+shader textures/hud/ammo_digit_empty
+}
+
+resource
+Label
+{
+name "clip_c0"
+rect 98 6 32 64
+fgcolor 1.00 1.00 1.00 1.00
+bgcolor 0.00 0.00 0.00 0.00
+borderstyle "NONE"
+linkcvar "cg_ammo_c0"
+linkcvartoshader
+shader textures/hud/ammo_digit_empty
+}
+
+resource
+Label
+{
+name "res_r2"
+rect 112 10 16 32
+fgcolor 1.00 1.00 1.00 1.00
+bgcolor 0.00 0.00 0.00 0.00
+borderstyle "NONE"
+linkcvar "cg_ammo_r2"
+linkcvartoshader
+shader textures/hud/ammo_digit_empty
+}
+
+resource
+Label
+{
+name "res_r1"
+rect 128 10 16 32
+fgcolor 1.00 1.00 1.00 1.00
+bgcolor 0.00 0.00 0.00 0.00
+borderstyle "NONE"
+linkcvar "cg_ammo_r1"
+linkcvartoshader
+shader textures/hud/ammo_digit_empty
+}
+
+resource
+Label
+{
+name "res_r0"
+rect 144 10 16 32
+fgcolor 1.00 1.00 1.00 1.00
+bgcolor 0.00 0.00 0.00 0.00
+borderstyle "NONE"
+linkcvar "cg_ammo_r0"
+linkcvartoshader
+shader textures/hud/ammo_digit_empty
+}
+
+resource
+Label
+{
+name "weaponname"
+rect 115 36 84 22
+fgcolor 1.00 1.00 1.00 1.00
+bgcolor 0.00 0.00 0.00 0.00
+borderstyle "NONE"
+itemstat 1
+textalign left
+font handle-23
+}
+
+resource
+Label
+{
+name "firemode"
+rect 34 60 64 16
+fgcolor 1.00 1.00 1.00 1.00
+bgcolor 0.00 0.00 0.00 0.00
+borderstyle "NONE"
+shader textures/hud/ammo_fire_single
+}
+
+resource
+Label
+{
+name "weapicon"
+rect 168 8 164 52
+fgcolor 1.00 1.00 1.00 1.00
+bgcolor 0.00 0.00 0.00 0.00
+borderstyle "NONE"
+shader textures/hud/ammo_weap_bazooka
+}
+
+resource
+Label
+{
+name "ammoticks"
+rect 152 76 160 14
+fgcolor 1.00 1.00 1.00 1.00
+bgcolor 0.00 0.00 0.00 0.00
+borderstyle "NONE"
+statbar horizontal
+playerstat 6
+maxplayerstat 7
+statbar_tileshader textures/hud/ammo_pip
+}
+
+end.

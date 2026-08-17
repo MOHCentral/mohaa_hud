@@ -1,0 +1,157 @@
+menu "hud_score" 320 88 NONE 1
+bgcolor 0 0 0 0
+fgcolor 1 1 1 1
+align right top
+
+resource
+Label
+{
+name "scorepanel"
+rect 4 4 312 80
+fgcolor 1.00 1.00 1.00 0.88
+bgcolor 0.00 0.00 0.00 0.00
+borderstyle "NONE"
+shader textures/hud/score_panel
+}
+
+resource
+Label
+{
+name "alliesicon"
+rect 10 8 46 46
+fgcolor 1.00 1.00 1.00 1.00
+bgcolor 0.00 0.00 0.00 0.00
+borderstyle "NONE"
+shader textures/hud/team_allies
+}
+
+resource
+Label
+{
+name "score_a2"
+rect 58 18 13 26
+fgcolor 1.00 1.00 1.00 1.00
+bgcolor 0.00 0.00 0.00 0.00
+borderstyle "NONE"
+linkcvar "cg_score_a2"
+linkcvartoshader
+shader textures/hud/digit_0
+}
+
+resource
+Label
+{
+name "score_a1"
+rect 71 18 13 26
+fgcolor 1.00 1.00 1.00 1.00
+bgcolor 0.00 0.00 0.00 0.00
+borderstyle "NONE"
+linkcvar "cg_score_a1"
+linkcvartoshader
+shader textures/hud/digit_empty
+}
+
+resource
+Label
+{
+name "score_a0"
+rect 84 18 13 26
+fgcolor 1.00 1.00 1.00 1.00
+bgcolor 0.00 0.00 0.00 0.00
+borderstyle "NONE"
+linkcvar "cg_score_a0"
+linkcvartoshader
+shader textures/hud/digit_empty
+}
+
+resource
+Label
+{
+name "scorelabel"
+title "SCORE"
+rect 134 18 52 22
+fgcolor 0.70 0.70 0.70 1.00
+bgcolor 0.00 0.00 0.00 0.00
+borderstyle "NONE"
+textalign center
+font facfont-20
+}
+
+resource
+Label
+{
+name "score_x2"
+rect 223 18 13 26
+fgcolor 1.00 1.00 1.00 1.00
+bgcolor 0.00 0.00 0.00 0.00
+borderstyle "NONE"
+linkcvar "cg_score_x2"
+linkcvartoshader
+shader textures/hud/digit_empty
+}
+
+resource
+Label
+{
+name "score_x1"
+rect 236 18 13 26
+fgcolor 1.00 1.00 1.00 1.00
+bgcolor 0.00 0.00 0.00 0.00
+borderstyle "NONE"
+linkcvar "cg_score_x1"
+linkcvartoshader
+shader textures/hud/digit_empty
+}
+
+resource
+Label
+{
+name "score_x0"
+rect 249 18 13 26
+fgcolor 1.00 1.00 1.00 1.00
+bgcolor 0.00 0.00 0.00 0.00
+borderstyle "NONE"
+linkcvar "cg_score_x0"
+linkcvartoshader
+shader textures/hud/digit_0
+}
+
+resource
+Label
+{
+name "axisicon"
+rect 264 8 46 46
+fgcolor 1.00 1.00 1.00 1.00
+bgcolor 0.00 0.00 0.00 0.00
+borderstyle "NONE"
+shader textures/hud/team_axis
+}
+
+resource
+Label
+{
+name "roundtimelabel"
+title "ROUND TIME"
+rect 50 58 120 20
+fgcolor 0.85 0.85 0.85 1.00
+bgcolor 0.00 0.00 0.00 0.00
+borderstyle "NONE"
+textalign left
+font facfont-20
+}
+
+resource
+Label
+{
+name "roundtime"
+title "0:00"
+rect 158 56 90 22
+fgcolor 1.00 1.00 1.00 1.00
+bgcolor 0.00 0.00 0.00 0.00
+borderstyle "NONE"
+textalign right
+font facfont-20
+linkcvar "cg_round_time"
+}
+
+end.
