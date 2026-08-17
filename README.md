@@ -65,6 +65,10 @@ Build **x86** `cgame.dll`. Close the game before overwriting the DLL.
 
 Score HUD extra: in multiplayer, add `ui_addhud hud_score` and remove stock `hud_timelimit` / `hud_fraglimit`. For a board that is Allies-left / Axis-right on every client, `fgame` `UpdateStats` should write Allies kills to `STAT_KILLS` and Axis kills to `STAT_HIGHEST_SCORE`.
 
+## Spectator
+
+The ammo panel is hidden in spectator (including follow). That is a **client** change in `cl_ui.cpp`, not cgame — see `src/cl_ui_ammo_spectator.md`. Rebuild `openmohaa.exe` (and ship `renderer_opengl1.dll` if the client loads the renderer as a DLL).
+
 ## Layout notes
 
 | HUD | Size | Align |
