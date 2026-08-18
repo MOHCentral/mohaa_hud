@@ -1,0 +1,65 @@
+menu "hud_nextmap" 140 272 NONE 1
+bgcolor 0 0 0 0
+fgcolor 1 1 1 1
+align left top
+
+resource
+Label
+{
+name "nextmappanel"
+rect 12 136 128 128
+fgcolor 1.00 1.00 1.00 1.00
+bgcolor 0.00 0.00 0.00 0.00
+borderstyle "NONE"
+shader textures/hud/nextmap_panel
+}
+
+resource
+Label
+{
+name "nextmapheader"
+rect 12 140 128 16
+fgcolor 1.00 1.00 1.00 1.00
+bgcolor 0.00 0.00 0.00 0.00
+borderstyle "NONE"
+shader textures/hud/nextmap_header
+}
+
+resource
+Label
+{
+name "nextmapline"
+rect 12 156 128 4
+fgcolor 1.00 1.00 1.00 1.00
+bgcolor 0.00 0.00 0.00 0.00
+borderstyle "NONE"
+shader textures/hud/nextmap_line
+}
+
+resource
+Label
+{
+name "nextmapname"
+rect 12 160 128 16
+fgcolor 1.00 1.00 1.00 1.00
+bgcolor 0.00 0.00 0.00 0.00
+borderstyle "NONE"
+linkcvar "cg_nextmap_name_img"
+linkcvartoshader
+shader textures/hud/nextmap_name_mohdm7
+}
+
+resource
+Label
+{
+name "nextmapshot"
+rect 12 184 128 64
+fgcolor 1.00 1.00 1.00 1.00
+bgcolor 0.00 0.00 0.00 0.00
+borderstyle "NONE"
+linkcvar "cg_nextmap_shot_img"
+linkcvartoshader
+shader textures/hud/nextmap_shot_mohdm7
+}
+
+end.
