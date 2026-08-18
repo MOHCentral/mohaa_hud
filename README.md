@@ -6,6 +6,7 @@ Modern HUD overlay for [OpenMoHAA](https://github.com/openmoh/openmohaa) (Medal 
 - **Score** — Allies / Axis panel with round time
 - **Compass** — custom dial, needle, objective markers (WIP)
 - **Ammo** — clip / reserve, fire mode, per-weapon silhouettes, magazine ticks
+- **Waiting** — top-center “WAITING FOR PLAYERS” until 2 clients join
 
 Requires your own copy of the game. This repo is **only** the HUD overlay — no Pak files or game binaries.
 
@@ -43,6 +44,8 @@ void CG_ScoreHud_Init(void);
 void CG_ScoreHud_Frame(void);
 void CG_AmmoHud_Init(void);
 void CG_AmmoHud_Frame(void);
+void CG_WaitingHud_Init(void);
+void CG_WaitingHud_Frame(void);
 ```
 
 `cg_main.c` (end of `CG_Init`)
@@ -51,6 +54,7 @@ void CG_AmmoHud_Frame(void);
 CG_HealthFrame_Init();
 CG_ScoreHud_Init();
 CG_AmmoHud_Init();
+CG_WaitingHud_Init();
 ```
 
 `cg_drawtools.cpp` (start of `CG_Draw2D`)
@@ -59,6 +63,7 @@ CG_AmmoHud_Init();
 CG_HealthFrame_Frame();
 CG_ScoreHud_Frame();
 CG_AmmoHud_Frame();
+CG_WaitingHud_Frame();
 ```
 
 Build **x86** `cgame.dll`. Close the game before overwriting the DLL.
@@ -77,5 +82,6 @@ The ammo panel is hidden in spectator (including follow). That is a **client** c
 | Score | 320×88 | right top |
 | Compass | 128×128 | left top (stock slot) |
 | Ammo | 356×116 | right bottom |
+| Waiting | 512×136 | centerx top |
 
-Ammo silhouettes: source PNGs in `textures/weapon/`. Rebuild HUD textures with `python tools/_hud_ammo_gen.py` (paths in that script point at a local OpenMoHAA `main/`).
+Ammo silhouettes: source PNGs in `textures/weapon/`. Rebuild HUD textures with `python tools/_hud_ammo_gen.py` (paths in that script point at a local OpenMoHAA `main/`). Waiting labels: `python tools/_hud_waiting_gen.py`.

@@ -1,0 +1,41 @@
+menu "hud_waiting" 512 136 NONE 1
+bgcolor 0 0 0 0
+fgcolor 1 1 1 1
+align centerx top
+
+resource
+Label
+{
+name "waitingtitle"
+rect 0 4 512 64
+fgcolor 1.00 1.00 1.00 1.00
+bgcolor 0.00 0.00 0.00 0.00
+borderstyle "NONE"
+shader textures/hud/waiting_title
+}
+
+resource
+Label
+{
+name "waitingneeded"
+rect 0 64 512 32
+fgcolor 1.00 1.00 1.00 1.00
+bgcolor 0.00 0.00 0.00 0.00
+borderstyle "NONE"
+shader textures/hud/waiting_needed
+}
+
+resource
+Label
+{
+name "waitingcount"
+rect 128 98 256 32
+fgcolor 1.00 1.00 1.00 1.00
+bgcolor 0.00 0.00 0.00 0.00
+borderstyle "NONE"
+linkcvar "cg_waiting_count_img"
+linkcvartoshader
+shader textures/hud/waiting_count_1
+}
+
+end.
